@@ -183,9 +183,7 @@ form label {
     margin-top: 12px;
     font-weight: bold;
 }
-
 form input[type="text"],
-form input[type="email"],
 form textarea {
     width: 100%;
     padding: 10px;
@@ -199,11 +197,6 @@ form textarea {
 form textarea {
     height: 120px;
     resize: none;
-}
-
-#mensaje-estado {
-    margin-top: 15px;
-    font-weight: bold;
 }
 
 /* --- Botones globales --- */
