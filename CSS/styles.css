@@ -1,74 +1,231 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: whitesmoke;
+    color: darkslategray;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
+/* --- Navegación --- */
 nav {
-    background-color: #333;
-    padding: 10px 0;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    border-bottom: 1px solid rgb(211, 211, 211);
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
+    list-style: none;
     padding: 0;
+    margin: 0;
     text-align: center;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(108, 108, 108);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 nav ul li a:hover {
-    color: #007bff;
+    color: lightlightsteelblue;
+    color: lavenderbackground;
+    color: lightsteelblue;
 }
 
+/* --- Estilos de la página Index --- */
 .presentacion {
+    background-color: white;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
     text-align: center;
-    padding: 50px 20px;
-    background-color: #fff;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .presentacion img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    margin-bottom: 20px;
+    border: 2px solid lightgray;
+    object-fit: cover;
 }
 
-.presentacion h1 {
-    margin: 10px 0;
+/* --- Estilos de Sobre Mí --- */
+.sobre-mi {
+    background-color: white;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
 }
 
-.presentacion p {
-    font-size: 18px;
-    margin: 10px 0;
+.img-sobre-mi {
+    width: 180px;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 25px;
 }
 
+/* --- Estilos de Habilidades --- */
+.habilidades {
+    background-color: white;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.habilidades ul {
+    list-style: none;
+    padding: 0;
+}
+
+.habilidades li {
+    background-color: rgb(250, 240, 230);
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border-left: 4px solid rgb(176, 196, 222);
+}
+
+/* --- Estilos de Proyectos --- */
+.proyectos {
+    background-color: white;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.proyecto {
+    background-color: rgb(247, 238, 229);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.img-proyecto {
+    width: 220px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+/* --- Estilos de Formación --- */
+.formacion {
+    background-color: white;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.formacion ul {
+    list-style: none;
+    padding: 0;
+}
+
+.formacion li {
+    background-color: rgb(250, 240, 230);
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border-left: 4px solid rgb(176, 196, 222);
+}
+
+/* --- Estilos de Contacto y Formulario --- */
+.contacto {
+    background-color: white;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.contacto ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contacto li {
+    background-color: rgb(248, 238, 228);
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+
+form {
+    margin-top: 25px;
+}
+
+form label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid silver;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+form textarea {
+    height: 120px;
+    resize: none;
+}
+
+#mensaje-estado {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* --- Botones globales --- */
 .boton {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: rgb(47, 79, 79);
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
 }
 
 .boton:hover {
-    background-color: #0056b3;
+    background-color: rgb(155, 181, 215);
 }
 
+
+img {
+    max-width: 100%;
+    height: auto;
+}
