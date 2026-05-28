@@ -4,6 +4,12 @@ body {
     color: darkslategray;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.modo-oscuro {
+    background-color: #1a1a1a;
+    color: #ffffff;
 }
 
 /* --- Navegación --- */
@@ -11,6 +17,12 @@ nav {
     background-color: rgb(255, 255, 255);
     padding: 15px;
     border-bottom: 1px solid rgb(211, 211, 211);
+    transition: background-color 0.3s ease;
+}
+
+body.modo-oscuro nav {
+    background-color: #141414;
+    border-bottom-color: #333;
 }
 
 nav ul {
@@ -32,10 +44,42 @@ nav ul li a {
     font-weight: 600;
 }
 
+body.modo-oscuro nav ul li a {
+    color: #e0e0e0;
+}
+
+body.modo-oscuro nav ul li a:hover {
+    color: #ffd966;
+}
+
 nav ul li a:hover {
     color: lightlightsteelblue;
     color: lavenderbackground;
     color: lightsteelblue;
+}
+
+
+/* --- Botón Modo Oscuro --- */
+.btn-modo-oscuro {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: transform 0.2s ease;
+}
+
+body.modo-oscuro .btn-modo-oscuro {
+    color: #ffffff;
+}
+
+.btn-modo-oscuro:hover {
+    transform: scale(1.2);
+}
+
+.btn-modo-oscuro:active {
+    transform: scale(0.95);
 }
 
 /* --- Estilos de la página Index --- */
@@ -47,6 +91,11 @@ nav ul li a:hover {
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
     text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+body.modo-oscuro .presentacion {
+    background-color: #2a2a2a;
 }
 
 .presentacion img {
@@ -65,6 +114,11 @@ nav ul li a:hover {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
+    transition: background-color 0.3s ease;
+}
+
+body.modo-oscuro .sobre-mi {
+    background-color: #2a2a2a;
 }
 
 .img-sobre-mi {
@@ -85,6 +139,11 @@ nav ul li a:hover {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
+    transition: background-color 0.3s ease;
+}
+
+body.modo-oscuro .habilidades {
+    background-color: #2a2a2a;
 }
 
 .habilidades ul {
@@ -100,6 +159,11 @@ nav ul li a:hover {
     border-left: 4px solid rgb(176, 196, 222);
 }
 
+body.modo-oscuro .habilidades li {
+    background-color: #3a3a3a;
+    border-left-color: #ffaa00;
+}
+
 /* --- Estilos de Proyectos --- */
 .proyectos {
     background-color: white;
@@ -108,6 +172,11 @@ nav ul li a:hover {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
+    transition: background-color 0.3s ease;
+}
+
+body.modo-oscuro .proyectos {
+    background-color: #2a2a2a;
 }
 
 .proyecto {
@@ -116,6 +185,10 @@ nav ul li a:hover {
     border-radius: 8px;
     margin-top: 20px;
     overflow: hidden;
+}
+
+body.modo-oscuro .proyecto {
+    background-color: #3a3a3a;
 }
 
 .img-proyecto {
@@ -137,6 +210,11 @@ nav ul li a:hover {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
+    transition: background-color 0.3s ease;
+}
+
+body.modo-oscuro .formacion {
+    background-color: #2a2a2a;
 }
 
 .formacion ul {
@@ -152,6 +230,11 @@ nav ul li a:hover {
     border-left: 4px solid rgb(176, 196, 222);
 }
 
+body.modo-oscuro .formacion li {
+    background-color: #3a3a3a;
+    border-left-color: #ffaa00;
+}
+
 /* --- Estilos de Contacto y Formulario --- */
 .contacto {
     background-color: white;
@@ -160,6 +243,11 @@ nav ul li a:hover {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
+    transition: background-color 0.3s ease;
+}
+
+body.modo-oscuro .contacto {
+    background-color: #2a2a2a;
 }
 
 .contacto ul {
@@ -174,6 +262,10 @@ nav ul li a:hover {
     border-radius: 6px;
 }
 
+body.modo-oscuro .contacto li {
+    background-color: #3a3a3a;
+}
+
 form {
     margin-top: 25px;
 }
@@ -183,6 +275,7 @@ form label {
     margin-top: 12px;
     font-weight: bold;
 }
+
 form input[type="text"],
 form textarea {
     width: 100%;
@@ -192,6 +285,14 @@ form textarea {
     border-radius: 6px;
     box-sizing: border-box;
     font-family: inherit;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.modo-oscuro form input[type="text"],
+body.modo-oscuro form textarea {
+    background-color: #3a3a3a;
+    color: #e0e0e0;
+    border-color: #555;
 }
 
 form textarea {
@@ -211,14 +312,159 @@ form textarea {
     border: none;
     cursor: pointer;
     font-size: 14px;
+    transition: background-color 0.3s ease;
 }
 
 .boton:hover {
     background-color: rgb(155, 181, 215);
 }
 
+body.modo-oscuro .boton {
+    background-color: #ffaa00;
+    color: #1a1a1a;
+}
+
+body.modo-oscuro .boton:hover {
+    background-color: #ffbb33;
+}
+
 
 img {
     max-width: 100%;
     height: auto;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+
+    .presentacion,
+    .sobre-mi,
+    .habilidades,
+    .proyectos,
+    .formacion,
+    .contacto {
+        max-width: 90%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    nav ul li {
+        margin: 5px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    .presentacion,
+    .sobre-mi,
+    .habilidades,
+    .proyectos,
+    .formacion,
+    .contacto {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .presentacion h1,
+    .sobre-mi h1,
+    .habilidades h1,
+    .proyectos h1,
+    .formacion h1,
+    .contacto h1 {
+        font-size: 20px;
+    }
+
+    .presentacion img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .img-sobre-mi,
+    .img-proyecto {
+        width: 100%;
+        float: none;
+        margin: 0 0 10px 0;
+    }
+
+    .proyecto {
+        padding: 15px;
+    }
+
+    .habilidades li,
+    .formacion li,
+    .contacto li {
+        font-size: 13px;
+    }
+
+    form label,
+    form input[type='text'],
+    form textarea {
+        font-size: 13px;
+    }
+
+    .boton {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 11px;
+        padding: 4px 6px;
+    }
+
+    .presentacion,
+    .sobre-mi,
+    .habilidades,
+    .proyectos,
+    .formacion,
+    .contacto {
+        max-width: 98%;
+        padding: 12px;
+    }
+
+    .presentacion h1,
+    .sobre-mi h1,
+    .habilidades h1,
+    .proyectos h1,
+    .formacion h1,
+    .contacto h1 {
+        font-size: 18px;
+    }
+
+    .presentacion img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .habilidades li,
+    .formacion li,
+    .contacto li {
+        font-size: 12px;
+    }
+
+    form label,
+    form input[type='text'],
+    form textarea {
+        font-size: 12px;
+    }
+
+    .boton {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
 }
